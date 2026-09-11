@@ -24,12 +24,12 @@ const Projectimages = ({ image, project, index }) => {
           className={`border-4 relative  rounded-2xl border-blue-100  w-full h-64 flex flex-col  items-center  bg-cover bg-center cursor-pointer`}
         >
           <img
-            src={image[currentImage]}
+            src={`${import.meta.env.BASE_URL}${image[currentImage]}`}
             className=" max-h-full cursor-pointer rounded-t-2xl order-2"
             alt=""
           />
           <div
-            className={`absolute inset-0 transition-opacit duration-300 opacity-0 ${image.length > 1 ? "group-hover:opacity-100" : ""}  w-full flex justify-between items-center px-2 order-2`}
+            className={`absolute inset-0 transition-opacit duration-300 md:opacity-0 ${image.length > 1 ? "group-hover:opacity-100" : ""}  w-full flex justify-between items-center px-2 order-2`}
           >
             <ArrowLeft
               className="flex active:text-black active:bg-white items-center justify-center  order-1 w-10 h-10 text-white text-2xl  bg-blue-400 rounded-full "
@@ -67,7 +67,7 @@ const Projectimages = ({ image, project, index }) => {
               setfullScreen(!fullScreen);
             }}
             className="max-w-[90vw] max-h-[90vh] object-contain cursor-pointer"
-            src={image[currentImage]}
+            src={`${import.meta.env.BASE_URL}${image[currentImage]}`}
             alt={`${project.Name} Screenshot ${currentImage + 1}`}
           />
           <ArrowRight

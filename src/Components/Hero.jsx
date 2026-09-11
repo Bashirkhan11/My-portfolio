@@ -23,19 +23,19 @@ const Hero = () => {
               ideas into clean, functional, and engaging digital experiences.
             </p>
             <a
-              href="/BashirCV.pdf"
+              href={`${import.meta.env.BASE_URL}BashirCV.pdf`}
               alt="Muhammad Bashir"
               download
               className="bg-blue-200 w-40 h-10 font-bold font-serif rounded-2xl text-center pt-2 border "
             >
               Download CV
             </a>
-            <button
-              to=""
+            <a
+              href="#Project"
               className="bg-blue-200 w-40 h-10 font-bold font-serif rounded-2xl text-center pt-2 border "
             >
               See Project!
-            </button>
+            </a>
           </div>
         </div>
       </div>
